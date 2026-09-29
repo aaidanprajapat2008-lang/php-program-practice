@@ -1,0 +1,19 @@
+<?php
+$num = 3;
+$isPrime = true;
+if ($num <= 1) {
+    $isPrime = false;
+} else {
+    for ($i = 2; $i <= sqrt($num); $i++) {
+        if ($num % $i == 0) {
+            $isPrime = false;
+            break;
+        }
+    }
+}
+if ($isPrime) {
+    echo "$num is a prime number.";
+} else {
+    echo "$num is not a prime number.";
+}
+?>
